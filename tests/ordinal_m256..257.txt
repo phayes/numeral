@@ -1,0 +1,513 @@
+minus two hundred fifty-six
+minus two hundred fifty-five
+minus two hundred fifty-four
+minus two hundred fifty-three
+minus two hundred fifty-two
+minus two hundred fifty-one
+minus two hundred fifty
+minus two hundred fourty-nine
+minus two hundred fourty-eight
+minus two hundred fourty-seven
+minus two hundred fourty-six
+minus two hundred fourty-five
+minus two hundred fourty-four
+minus two hundred fourty-three
+minus two hundred fourty-two
+minus two hundred fourty-one
+minus two hundred fourty
+minus two hundred thirty-nine
+minus two hundred thirty-eight
+minus two hundred thirty-seven
+minus two hundred thirty-six
+minus two hundred thirty-five
+minus two hundred thirty-four
+minus two hundred thirty-three
+minus two hundred thirty-two
+minus two hundred thirty-one
+minus two hundred thirty
+minus two hundred twenty-nine
+minus two hundred twenty-eight
+minus two hundred twenty-seven
+minus two hundred twenty-six
+minus two hundred twenty-five
+minus two hundred twenty-four
+minus two hundred twenty-three
+minus two hundred twenty-two
+minus two hundred twenty-one
+minus two hundred twenty
+minus two hundred nineteen
+minus two hundred eighteen
+minus two hundred seventeen
+minus two hundred sixteen
+minus two hundred fifteen
+minus two hundred fourteen
+minus two hundred thirteen
+minus two hundred twelve
+minus two hundred eleven
+minus two hundred ten
+minus two hundred nine
+minus two hundred eight
+minus two hundred seven
+minus two hundred six
+minus two hundred five
+minus two hundred four
+minus two hundred three
+minus two hundred two
+minus two hundred one
+minus two hundred
+minus one hundred ninety-nine
+minus one hundred ninety-eight
+minus one hundred ninety-seven
+minus one hundred ninety-six
+minus one hundred ninety-five
+minus one hundred ninety-four
+minus one hundred ninety-three
+minus one hundred ninety-two
+minus one hundred ninety-one
+minus one hundred ninety
+minus one hundred eighty-nine
+minus one hundred eighty-eight
+minus one hundred eighty-seven
+minus one hundred eighty-six
+minus one hundred eighty-five
+minus one hundred eighty-four
+minus one hundred eighty-three
+minus one hundred eighty-two
+minus one hundred eighty-one
+minus one hundred eighty
+minus one hundred seventy-nine
+minus one hundred seventy-eight
+minus one hundred seventy-seven
+minus one hundred seventy-six
+minus one hundred seventy-five
+minus one hundred seventy-four
+minus one hundred seventy-three
+minus one hundred seventy-two
+minus one hundred seventy-one
+minus one hundred seventy
+minus one hundred sixty-nine
+minus one hundred sixty-eight
+minus one hundred sixty-seven
+minus one hundred sixty-six
+minus one hundred sixty-five
+minus one hundred sixty-four
+minus one hundred sixty-three
+minus one hundred sixty-two
+minus one hundred sixty-one
+minus one hundred sixty
+minus one hundred fifty-nine
+minus one hundred fifty-eight
+minus one hundred fifty-seven
+minus one hundred fifty-six
+minus one hundred fifty-five
+minus one hundred fifty-four
+minus one hundred fifty-three
+minus one hundred fifty-two
+minus one hundred fifty-one
+minus one hundred fifty
+minus one hundred fourty-nine
+minus one hundred fourty-eight
+minus one hundred fourty-seven
+minus one hundred fourty-six
+minus one hundred fourty-five
+minus one hundred fourty-four
+minus one hundred fourty-three
+minus one hundred fourty-two
+minus one hundred fourty-one
+minus one hundred fourty
+minus one hundred thirty-nine
+minus one hundred thirty-eight
+minus one hundred thirty-seven
+minus one hundred thirty-six
+minus one hundred thirty-five
+minus one hundred thirty-four
+minus one hundred thirty-three
+minus one hundred thirty-two
+minus one hundred thirty-one
+minus one hundred thirty
+minus one hundred twenty-nine
+minus one hundred twenty-eight
+minus one hundred twenty-seven
+minus one hundred twenty-six
+minus one hundred twenty-five
+minus one hundred twenty-four
+minus one hundred twenty-three
+minus one hundred twenty-two
+minus one hundred twenty-one
+minus one hundred twenty
+minus one hundred nineteen
+minus one hundred eighteen
+minus one hundred seventeen
+minus one hundred sixteen
+minus one hundred fifteen
+minus one hundred fourteen
+minus one hundred thirteen
+minus one hundred twelve
+minus one hundred eleven
+minus one hundred ten
+minus one hundred nine
+minus one hundred eight
+minus one hundred seven
+minus one hundred six
+minus one hundred five
+minus one hundred four
+minus one hundred three
+minus one hundred two
+minus one hundred one
+minus one hundred
+minus ninety-nine
+minus ninety-eight
+minus ninety-seven
+minus ninety-six
+minus ninety-five
+minus ninety-four
+minus ninety-three
+minus ninety-two
+minus ninety-one
+minus ninety
+minus eighty-nine
+minus eighty-eight
+minus eighty-seven
+minus eighty-six
+minus eighty-five
+minus eighty-four
+minus eighty-three
+minus eighty-two
+minus eighty-one
+minus eighty
+minus seventy-nine
+minus seventy-eight
+minus seventy-seven
+minus seventy-six
+minus seventy-five
+minus seventy-four
+minus seventy-three
+minus seventy-two
+minus seventy-one
+minus seventy
+minus sixty-nine
+minus sixty-eight
+minus sixty-seven
+minus sixty-six
+minus sixty-five
+minus sixty-four
+minus sixty-three
+minus sixty-two
+minus sixty-one
+minus sixty
+minus fifty-nine
+minus fifty-eight
+minus fifty-seven
+minus fifty-six
+minus fifty-five
+minus fifty-four
+minus fifty-three
+minus fifty-two
+minus fifty-one
+minus fifty
+minus fourty-nine
+minus fourty-eight
+minus fourty-seven
+minus fourty-six
+minus fourty-five
+minus fourty-four
+minus fourty-three
+minus fourty-two
+minus fourty-one
+minus fourty
+minus thirty-nine
+minus thirty-eight
+minus thirty-seven
+minus thirty-six
+minus thirty-five
+minus thirty-four
+minus thirty-three
+minus thirty-two
+minus thirty-one
+minus thirty
+minus twenty-nine
+minus twenty-eight
+minus twenty-seven
+minus twenty-six
+minus twenty-five
+minus twenty-four
+minus twenty-three
+minus twenty-two
+minus twenty-one
+minus twenty
+minus nineteen
+minus eighteen
+minus seventeen
+minus sixteen
+minus fifteen
+minus fourteen
+minus thirteen
+minus twelve
+minus eleven
+minus ten
+minus nine
+minus eight
+minus seven
+minus six
+minus five
+minus four
+minus three
+minus two
+minus one
+zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+twelve
+thirteen
+fourteen
+fifteen
+sixteen
+seventeen
+eighteen
+nineteen
+twenty
+twenty-one
+twenty-two
+twenty-three
+twenty-four
+twenty-five
+twenty-six
+twenty-seven
+twenty-eight
+twenty-nine
+thirty
+thirty-one
+thirty-two
+thirty-three
+thirty-four
+thirty-five
+thirty-six
+thirty-seven
+thirty-eight
+thirty-nine
+fourty
+fourty-one
+fourty-two
+fourty-three
+fourty-four
+fourty-five
+fourty-six
+fourty-seven
+fourty-eight
+fourty-nine
+fifty
+fifty-one
+fifty-two
+fifty-three
+fifty-four
+fifty-five
+fifty-six
+fifty-seven
+fifty-eight
+fifty-nine
+sixty
+sixty-one
+sixty-two
+sixty-three
+sixty-four
+sixty-five
+sixty-six
+sixty-seven
+sixty-eight
+sixty-nine
+seventy
+seventy-one
+seventy-two
+seventy-three
+seventy-four
+seventy-five
+seventy-six
+seventy-seven
+seventy-eight
+seventy-nine
+eighty
+eighty-one
+eighty-two
+eighty-three
+eighty-four
+eighty-five
+eighty-six
+eighty-seven
+eighty-eight
+eighty-nine
+ninety
+ninety-one
+ninety-two
+ninety-three
+ninety-four
+ninety-five
+ninety-six
+ninety-seven
+ninety-eight
+ninety-nine
+one hundred
+one hundred one
+one hundred two
+one hundred three
+one hundred four
+one hundred five
+one hundred six
+one hundred seven
+one hundred eight
+one hundred nine
+one hundred ten
+one hundred eleven
+one hundred twelve
+one hundred thirteen
+one hundred fourteen
+one hundred fifteen
+one hundred sixteen
+one hundred seventeen
+one hundred eighteen
+one hundred nineteen
+one hundred twenty
+one hundred twenty-one
+one hundred twenty-two
+one hundred twenty-three
+one hundred twenty-four
+one hundred twenty-five
+one hundred twenty-six
+one hundred twenty-seven
+one hundred twenty-eight
+one hundred twenty-nine
+one hundred thirty
+one hundred thirty-one
+one hundred thirty-two
+one hundred thirty-three
+one hundred thirty-four
+one hundred thirty-five
+one hundred thirty-six
+one hundred thirty-seven
+one hundred thirty-eight
+one hundred thirty-nine
+one hundred fourty
+one hundred fourty-one
+one hundred fourty-two
+one hundred fourty-three
+one hundred fourty-four
+one hundred fourty-five
+one hundred fourty-six
+one hundred fourty-seven
+one hundred fourty-eight
+one hundred fourty-nine
+one hundred fifty
+one hundred fifty-one
+one hundred fifty-two
+one hundred fifty-three
+one hundred fifty-four
+one hundred fifty-five
+one hundred fifty-six
+one hundred fifty-seven
+one hundred fifty-eight
+one hundred fifty-nine
+one hundred sixty
+one hundred sixty-one
+one hundred sixty-two
+one hundred sixty-three
+one hundred sixty-four
+one hundred sixty-five
+one hundred sixty-six
+one hundred sixty-seven
+one hundred sixty-eight
+one hundred sixty-nine
+one hundred seventy
+one hundred seventy-one
+one hundred seventy-two
+one hundred seventy-three
+one hundred seventy-four
+one hundred seventy-five
+one hundred seventy-six
+one hundred seventy-seven
+one hundred seventy-eight
+one hundred seventy-nine
+one hundred eighty
+one hundred eighty-one
+one hundred eighty-two
+one hundred eighty-three
+one hundred eighty-four
+one hundred eighty-five
+one hundred eighty-six
+one hundred eighty-seven
+one hundred eighty-eight
+one hundred eighty-nine
+one hundred ninety
+one hundred ninety-one
+one hundred ninety-two
+one hundred ninety-three
+one hundred ninety-four
+one hundred ninety-five
+one hundred ninety-six
+one hundred ninety-seven
+one hundred ninety-eight
+one hundred ninety-nine
+two hundred
+two hundred one
+two hundred two
+two hundred three
+two hundred four
+two hundred five
+two hundred six
+two hundred seven
+two hundred eight
+two hundred nine
+two hundred ten
+two hundred eleven
+two hundred twelve
+two hundred thirteen
+two hundred fourteen
+two hundred fifteen
+two hundred sixteen
+two hundred seventeen
+two hundred eighteen
+two hundred nineteen
+two hundred twenty
+two hundred twenty-one
+two hundred twenty-two
+two hundred twenty-three
+two hundred twenty-four
+two hundred twenty-five
+two hundred twenty-six
+two hundred twenty-seven
+two hundred twenty-eight
+two hundred twenty-nine
+two hundred thirty
+two hundred thirty-one
+two hundred thirty-two
+two hundred thirty-three
+two hundred thirty-four
+two hundred thirty-five
+two hundred thirty-six
+two hundred thirty-seven
+two hundred thirty-eight
+two hundred thirty-nine
+two hundred fourty
+two hundred fourty-one
+two hundred fourty-two
+two hundred fourty-three
+two hundred fourty-four
+two hundred fourty-five
+two hundred fourty-six
+two hundred fourty-seven
+two hundred fourty-eight
+two hundred fourty-nine
+two hundred fifty
+two hundred fifty-one
+two hundred fifty-two
+two hundred fifty-three
+two hundred fifty-four
+two hundred fifty-five
+two hundred fifty-six

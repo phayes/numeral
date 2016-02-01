@@ -5,16 +5,16 @@ minus two hundred fifty-three
 minus two hundred fifty-two
 minus two hundred fifty-one
 minus two hundred fifty
-minus two hundred fourty-nine
-minus two hundred fourty-eight
-minus two hundred fourty-seven
-minus two hundred fourty-six
-minus two hundred fourty-five
-minus two hundred fourty-four
-minus two hundred fourty-three
-minus two hundred fourty-two
-minus two hundred fourty-one
-minus two hundred fourty
+minus two hundred forty-nine
+minus two hundred forty-eight
+minus two hundred forty-seven
+minus two hundred forty-six
+minus two hundred forty-five
+minus two hundred forty-four
+minus two hundred forty-three
+minus two hundred forty-two
+minus two hundred forty-one
+minus two hundred forty
 minus two hundred thirty-nine
 minus two hundred thirty-eight
 minus two hundred thirty-seven
@@ -105,16 +105,16 @@ minus one hundred fifty-three
 minus one hundred fifty-two
 minus one hundred fifty-one
 minus one hundred fifty
-minus one hundred fourty-nine
-minus one hundred fourty-eight
-minus one hundred fourty-seven
-minus one hundred fourty-six
-minus one hundred fourty-five
-minus one hundred fourty-four
-minus one hundred fourty-three
-minus one hundred fourty-two
-minus one hundred fourty-one
-minus one hundred fourty
+minus one hundred forty-nine
+minus one hundred forty-eight
+minus one hundred forty-seven
+minus one hundred forty-six
+minus one hundred forty-five
+minus one hundred forty-four
+minus one hundred forty-three
+minus one hundred forty-two
+minus one hundred forty-one
+minus one hundred forty
 minus one hundred thirty-nine
 minus one hundred thirty-eight
 minus one hundred thirty-seven
@@ -205,16 +205,16 @@ minus fifty-three
 minus fifty-two
 minus fifty-one
 minus fifty
-minus fourty-nine
-minus fourty-eight
-minus fourty-seven
-minus fourty-six
-minus fourty-five
-minus fourty-four
-minus fourty-three
-minus fourty-two
-minus fourty-one
-minus fourty
+minus forty-nine
+minus forty-eight
+minus forty-seven
+minus forty-six
+minus forty-five
+minus forty-four
+minus forty-three
+minus forty-two
+minus forty-one
+minus forty
 minus thirty-nine
 minus thirty-eight
 minus thirty-seven
@@ -294,16 +294,16 @@ thirty-six
 thirty-seven
 thirty-eight
 thirty-nine
-fourty
-fourty-one
-fourty-two
-fourty-three
-fourty-four
-fourty-five
-fourty-six
-fourty-seven
-fourty-eight
-fourty-nine
+forty
+forty-one
+forty-two
+forty-three
+forty-four
+forty-five
+forty-six
+forty-seven
+forty-eight
+forty-nine
 fifty
 fifty-one
 fifty-two
@@ -394,16 +394,16 @@ one hundred thirty-six
 one hundred thirty-seven
 one hundred thirty-eight
 one hundred thirty-nine
-one hundred fourty
-one hundred fourty-one
-one hundred fourty-two
-one hundred fourty-three
-one hundred fourty-four
-one hundred fourty-five
-one hundred fourty-six
-one hundred fourty-seven
-one hundred fourty-eight
-one hundred fourty-nine
+one hundred forty
+one hundred forty-one
+one hundred forty-two
+one hundred forty-three
+one hundred forty-four
+one hundred forty-five
+one hundred forty-six
+one hundred forty-seven
+one hundred forty-eight
+one hundred forty-nine
 one hundred fifty
 one hundred fifty-one
 one hundred fifty-two
@@ -494,16 +494,16 @@ two hundred thirty-six
 two hundred thirty-seven
 two hundred thirty-eight
 two hundred thirty-nine
-two hundred fourty
-two hundred fourty-one
-two hundred fourty-two
-two hundred fourty-three
-two hundred fourty-four
-two hundred fourty-five
-two hundred fourty-six
-two hundred fourty-seven
-two hundred fourty-eight
-two hundred fourty-nine
+two hundred forty
+two hundred forty-one
+two hundred forty-two
+two hundred forty-three
+two hundred forty-four
+two hundred forty-five
+two hundred forty-six
+two hundred forty-seven
+two hundred forty-eight
+two hundred forty-nine
 two hundred fifty
 two hundred fifty-one
 two hundred fifty-two

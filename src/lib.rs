@@ -31,7 +31,7 @@ const TENS: [&'static str; 10] = [
     "",
     "twenty",
     "thirty",
-    "fourty",
+    "forty",
     "fifty",
     "sixty",
     "seventy",

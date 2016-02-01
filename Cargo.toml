@@ -2,5 +2,17 @@
 name = "numeral"
 version = "0.1.0"
 authors = ["Letheed <dev@daweb.se>"]
+description = "Provides the written english form of a number."
+
+documentation = "https://letheed.github.io/numeral"
+homepage = "https://crates.io/crates/numeral"
+repository = "https://github.com/Letheed/numeral"
+readme = "README.md"
+keywords = ["number", "numeral", "written", "word", "convert", "ordinal"]
+license = "MPL-2.0"
 
 [dependencies]
+
+[lib]
+name = "numeral"
+path = "src/lib.rs"

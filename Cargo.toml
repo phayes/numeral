@@ -8,7 +8,7 @@ documentation = "https://letheed.github.io/numeral"
 homepage = "https://crates.io/crates/numeral"
 repository = "https://github.com/Letheed/numeral"
 readme = "README.md"
-keywords = ["number", "numeral", "written", "word", "convert", "ordinal"]
+keywords = ["number", "numeral", "written", "word", "ordinal"]
 license = "MPL-2.0"
 
 [dependencies]

@@ -1,6 +1,6 @@
 [package]
 name = "numeral"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Letheed <dev@daweb.se>"]
 description = "Provides the written english form of a number."
 

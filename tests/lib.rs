@@ -7,7 +7,7 @@ extern crate numeral;
 
 use numeral::Numeral;
 use std::fs::File;
-use std::io::{BufRead, BufReader, Write};
+use std::io::{BufRead, BufReader};
 
 macro_rules! test_call_on_min_max {
     ($fn_name: ident, $numtype: ty) => (

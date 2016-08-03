@@ -83,7 +83,7 @@ macro_rules! impl_numeral_signed {
     ($($numtype: ty),*) => ($(
         impl Numeral for $numtype {
             fn ordinal(&self) -> String {
-                ordinal_int(i64::from(*self).abs() as u64, *self < 0).concat()
+                ordinal_int(i64::from(*self).abs() as u64, *self < 0)
             }
         }
     )*)
@@ -94,7 +94,7 @@ impl_numeral_signed!(i8, i16, i32);
 impl Numeral for i64 {
     fn ordinal(&self) -> String {
         let n_abs = if *self == i64::min_value() { *self as u64 } else { self.abs() as u64 };
-        ordinal_int(n_abs, *self < 0).concat()
+        ordinal_int(n_abs, *self < 0)
     }
 }
 
@@ -102,7 +102,7 @@ macro_rules! impl_numeral_unsigned {
     ($($numtype: ty),*) => ($(
         impl Numeral for $numtype {
             fn ordinal(&self) -> String {
-                ordinal_int(u64::from(*self), false).concat()
+                ordinal_int(u64::from(*self), false)
             }
         }
     )*)
@@ -113,15 +113,15 @@ impl_numeral_unsigned!(u8, u16, u32, u64);
 /// Returns the written form of any 64-bit integer
 /// as a vector of strings.
 #[inline]
-fn ordinal_int(n: u64, negative: bool) -> Vec<&'static str> {
-    if n == 0 { return vec![NUMBER[0]] }
+fn ordinal_int(n: u64, negative: bool) -> String {
+    if n == 0 { return NUMBER[0].to_owned() }
     let multiple_order = ((n as f32).log10() as u32) / 3;
     let max_len = multiple_order as usize * 8 + 6;
     let mut numeral = Vec::with_capacity(max_len);
     if negative { numeral.push("minus "); }
     compose_ordinal_int(n, multiple_order, &mut numeral);
     debug_assert!(numeral.len() <= max_len);
-    numeral
+    numeral.concat()
 }
 
 macro_rules! push {
@@ -134,12 +134,12 @@ macro_rules! push {
 /// Pushes the strings composing the ordinal form of any unsigned 64-bit number
 /// on a vector. Zero is ignored.
 #[inline]
-fn compose_ordinal_int(n: u64, multiple_order: u32, numeral: &mut Vec<&'static str>) {
+fn compose_ordinal_int(mut n: u64, mut multiple_order: u32, numeral: &mut Vec<&str>) {
+    debug_assert!(n != 0, "n == 0 in compose_ordinal_int()");
     debug_assert!(multiple_order == ((n as f32).log10() as u32) / 3, "wrong value for multiple_order in compose_ordinal_int()");
-    let (mut n, mut multiple_order) = (n, multiple_order);
-    let mut multiplier = 10u64.pow(multiple_order * 3);
-    let mut multiplicand;
     if multiple_order > 0 {
+        let mut multiplier = 10u64.pow(multiple_order * 3);
+        let mut multiplicand;
         loop {
             multiplicand = n / multiplier;
             n %= multiplier;
@@ -148,10 +148,11 @@ fn compose_ordinal_int(n: u64, multiple_order: u32, numeral: &mut Vec<&'static s
                 numeral.push(" ");
                 push!(MULTIPLIER[multiple_order] on numeral);
                 if n != 0 { numeral.push(" "); }
+                else { return }
             }
             multiple_order -= 1;
             if multiple_order == 0 { break }
-            multiplier = multiplier / 1000;
+            multiplier /= 1000;
         }
     }
     push_triplet(n, numeral);
@@ -160,13 +161,14 @@ fn compose_ordinal_int(n: u64, multiple_order: u32, numeral: &mut Vec<&'static s
 /// Takes a three-digit integer (n in [1,999]) and adds it's written form
 /// to a numeral in construction. Zero is ignored.
 #[inline]
-fn push_triplet(n: u64, numeral: &mut Vec<&'static str>) {
+fn push_triplet(n: u64, numeral: &mut Vec<&str>) {
+    debug_assert!(n != 0, "n == 0 in push_triplet()");
     debug_assert!(n < 1000, "n >= 1000 in push_triplet()");
     let hundreds = n / 100;
     let rest = n % 100;
     if hundreds != 0 {
         push!(NUMBER[hundreds] on numeral);
-        if rest == 0 { numeral.push(" hundred"); }
+        if rest == 0 { numeral.push(" hundred"); return }
         else { numeral.push(" hundred "); }
     }
     push_doublet(rest, numeral);
@@ -175,10 +177,10 @@ fn push_triplet(n: u64, numeral: &mut Vec<&'static str>) {
 /// Takes a two-digit integer (n in [1,99]) and adds it's written form
 /// to a numeral in construction. Zero is ignored.
 #[inline]
-fn push_doublet(n: u64, numeral: &mut Vec<&'static str>) {
+fn push_doublet(n: u64, numeral: &mut Vec<&str>) {
+    debug_assert!(n != 0, "n == 0 in push_doublet()");
     debug_assert!(n < 100, "n >= 100 in push_doublet()");
-    if n == 0 { return }
-    else if n < 20  {
+    if n < 20  {
         push!(NUMBER[n] on numeral);
     }
     else {

@@ -3,6 +3,20 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
+//! A Rust library providing the written english form of a number.
+//!
+//! # Example
+//!
+//! ```rust
+//! use numeral::Numeral;
+//!
+//! let n = 127;
+//! println!("{} is written: {}", n, n.ordinal());
+//! ```
+
+
+#![warn(missing_docs)]
+
 const NUMBER: [&'static str; 20] = [
     "zero",
     "one",

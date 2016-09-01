@@ -1,6 +1,6 @@
 [package]
 name = "numeral"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Letheed <dev@daweb.se>"]
 description = "Written english form of a number"
 documentation = "https://letheed.github.io/numeral"

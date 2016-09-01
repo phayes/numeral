@@ -3,6 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
+#![feature(inclusive_range_syntax)]
+
 extern crate numeral;
 
 use numeral::Numeral;
@@ -32,11 +34,9 @@ macro_rules! test_call_on_range {
     ($fn_name: ident, $numtype: ty) => {
         #[test]
         fn $fn_name() {
-            for n in (<$numtype>::min_value())..(<$numtype>::max_value()) {
+            for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
                 n.ordinal();
             }
-            // waiting for inclusive ranges
-            <$numtype>::max_value().ordinal();
         }
     }
 }
@@ -50,16 +50,14 @@ macro_rules! test_call_on_critical_ranges {
     ($fn_name: ident, $numtype: ty) => (
         #[test]
         fn $fn_name() {
-            for n in (<$numtype>::min_value())..(<$numtype>::min_value()) + 130 {
+            for n in (<$numtype>::min_value())...(<$numtype>::min_value()) + 130 {
                 n.ordinal();
             }
-            for n in (<$numtype>::max_value()) - 130..(<$numtype>::max_value()) {
+            for n in (<$numtype>::max_value()) - 130...(<$numtype>::max_value()) {
                 n.ordinal();
             }
-            // waiting for inclusive ranges
-            <$numtype>::max_value().ordinal();
             if <$numtype>::min_value() != 0 {
-                for n in -130..130 {
+                for n in -130...130 {
                     n.ordinal();
                 }
             }
@@ -74,16 +72,16 @@ test_call_on_critical_ranges!(call_on_critical_ranges_u64, u64);
 
 #[test]
 fn ordinal_int_m256_257() {
-    let file = File::open("tests/ordinal_m256..257.txt").unwrap();
+    let file = File::open("tests/ordinal_m256...256.txt").unwrap();
     assert!(BufReader::new(file).lines()
-            .map(|n| n.unwrap())
-            .eq((-256..257).map(|n| n.ordinal())));
+            .map(|n_str| n_str.unwrap())
+            .eq((-256...256).map(|n| n.ordinal())));
 }
 
 #[test]
 fn ordinal_int_min_max() {
     let file = File::open("tests/ordinal_min_max.txt").unwrap();
-    let mut lines = BufReader::new(file).lines().map(|l| l.unwrap());
+    let mut lines = BufReader::new(file).lines().map(|n_str| n_str.unwrap());
     macro_rules! assert_eq_min_max {
         ($signed: ty, $unsigned: ty) => {
             assert_eq!(lines.next().unwrap(), <$signed>::min_value().ordinal());

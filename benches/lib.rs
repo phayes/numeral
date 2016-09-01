@@ -4,6 +4,7 @@
  */
 
 #![feature(test)]
+#![feature(inclusive_range_syntax)]
 
 extern crate numeral;
 extern crate test;
@@ -16,11 +17,9 @@ macro_rules! bench_call_on_range {
         #[bench]
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {
-                for n in (<$numtype>::min_value())..(<$numtype>::max_value()) {
+                for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
                     n.ordinal();
                 }
-                // waiting for inclusive ranges
-                <$numtype>::max_value().ordinal();
             })
         }
     }

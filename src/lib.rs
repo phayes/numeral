@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-//! A Rust library providing the written english form of a number.
+//! A library providing the written english form of a number.
 //!
 //! # Example
 //!
@@ -65,7 +65,7 @@ const MULTIPLIER: [&'static str; 9] = [
     "septillion",
 ];
 
-/// The `Ordinal` trait provides the written form of a number.
+/// Provides the ordinal written form of a number.
 pub trait Ordinal {
     /// Yields the ordinal form of a number.
     ///
@@ -112,9 +112,8 @@ impl_numeral_unsigned!(u8, u16, u32, u64);
 
 /// Returns the written form of any 64-bit integer
 /// as a vector of strings.
-#[inline]
 fn ordinal_int(n: u64, negative: bool) -> String {
-    if n == 0 { return NUMBER[0].to_owned() }
+    if n == 0 { return String::from(NUMBER[0]) }
     let multiple_order = ((n as f32).log10() as u32) / 3;
     let max_len = multiple_order as usize * 8 + 6;
     let mut ordinal = Vec::with_capacity(max_len);
@@ -133,7 +132,6 @@ macro_rules! push {
 
 /// Pushes the strings composing the ordinal form of any unsigned 64-bit number
 /// on a vector. Zero is ignored.
-#[inline]
 fn compose_ordinal_int(mut n: u64, mut multiple_order: u32, ordinal: &mut Vec<&str>) {
     debug_assert!(n != 0, "n == 0 in compose_ordinal_int()");
     debug_assert!(multiple_order == ((n as f32).log10() as u32) / 3, "wrong value for multiple_order in compose_ordinal_int()");
@@ -159,12 +157,12 @@ fn compose_ordinal_int(mut n: u64, mut multiple_order: u32, ordinal: &mut Vec<&s
     push_triplet(n, ordinal);
 }
 
-/// Takes a three-digit integer (n in [1,999]) and adds it's written form
+/// Takes an integer in [1,999] and adds it's written form
 /// to an ordinal in construction. Zero is ignored.
-#[inline]
 fn push_triplet(n: u64, ordinal: &mut Vec<&str>) {
     debug_assert!(n != 0, "n == 0 in push_triplet()");
     debug_assert!(n < 1000, "n >= 1000 in push_triplet()");
+
     let hundreds = n / 100;
     let rest = n % 100;
     if hundreds != 0 {
@@ -175,12 +173,12 @@ fn push_triplet(n: u64, ordinal: &mut Vec<&str>) {
     push_doublet(rest, ordinal);
 }
 
-/// Takes a two-digit integer (n in [1,99]) and adds it's written form
+/// Takes an integer in [1,99] and adds it's written form
 /// to an ordinal in construction. Zero is ignored.
-#[inline]
 fn push_doublet(n: u64, ordinal: &mut Vec<&str>) {
     debug_assert!(n != 0, "n == 0 in push_doublet()");
     debug_assert!(n < 100, "n >= 100 in push_doublet()");
+
     if n < 20  {
         push!(ordinal, NUMBER[n]);
     }

@@ -9,7 +9,7 @@
 extern crate numeral;
 extern crate test;
 
-use numeral::Numeral;
+use numeral::Ordinal;
 use test::Bencher;
 
 macro_rules! bench_call_on_range {

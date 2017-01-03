@@ -7,7 +7,7 @@
 
 extern crate numeral;
 
-use numeral::Numeral;
+use numeral::Ordinal;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 

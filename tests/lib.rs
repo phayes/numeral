@@ -75,15 +75,15 @@ test_call_on_critical_ranges!(call_on_critical_ranges_isize, isize);
 test_call_on_critical_ranges!(call_on_critical_ranges_usize, usize);
 
 #[test]
-fn cardinal_int_m256_257() {
+fn cardinal_value_m256_256() {
     let file = File::open("tests/cardinal_m256...256.txt").unwrap();
     assert!(BufReader::new(file).lines()
             .map(|n_str| n_str.unwrap())
-            .eq((-256...256).map(|n| n.cardinal())));
+            .eq((-256...256).map(|n: i32| n.cardinal())));
 }
 
 #[test]
-fn cardinal_int_min_max() {
+fn cardinal_value_min_max_int() {
     let file = File::open("tests/cardinal_min_max.txt").unwrap();
     let mut lines = BufReader::new(file).lines().map(|n_str| n_str.unwrap());
     macro_rules! assert_eq_min_max {
@@ -101,7 +101,7 @@ fn cardinal_int_min_max() {
 }
 
 #[test]
-fn cardinal_min_max_ptr() {
+fn cardinal_value_min_max_ptr() {
     use std::mem::size_of;
 
     macro_rules! assert_eq_min_max_if_ptr_is {

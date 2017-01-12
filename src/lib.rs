@@ -80,7 +80,7 @@ pub trait Cardinal {
 }
 
 macro_rules! impl_numeral_signed {
-    ($($numtype: ty),*) => ($(
+    ($($numtype:ty),*) => ($(
         impl Cardinal for $numtype {
             fn cardinal(&self) -> String {
                 cardinal_int(i64::from(*self).abs() as u64, *self < 0)
@@ -99,7 +99,7 @@ impl Cardinal for i64 {
 }
 
 macro_rules! impl_numeral_unsigned {
-    ($($numtype: ty),*) => ($(
+    ($($numtype:ty),*) => ($(
         impl Cardinal for $numtype {
             fn cardinal(&self) -> String {
                 cardinal_int(u64::from(*self), false)
@@ -124,7 +124,7 @@ fn cardinal_int(n: u64, negative: bool) -> String {
 }
 
 macro_rules! push {
-    ($vec: ident, $table: ident[$index: ident]) => (
+    ($vec:ident, $table:ident[$index:ident]) => (
         debug_assert!(($index as usize) < $table.len(), format!("{} out of {}'s range", stringify!($index), stringify!($table)));
         $vec.push($table[$index as usize]);
     )

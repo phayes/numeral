@@ -12,7 +12,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 macro_rules! test_call_on_min_max {
-    ($fn_name: ident, $numtype: ty) => (
+    ($fn_name:ident, $numtype:ty) => (
         #[test]
         fn $fn_name() {
             <$numtype>::max_value().cardinal();
@@ -31,14 +31,14 @@ test_call_on_min_max!(call_on_min_max_i64, i64);
 test_call_on_min_max!(call_on_min_max_u64, u64);
 
 macro_rules! test_call_on_range {
-    ($fn_name: ident, $numtype: ty) => {
+    ($fn_name:ident, $numtype:ty) => (
         #[test]
         fn $fn_name() {
             for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
                 n.cardinal();
             }
         }
-    }
+    )
 }
 
 test_call_on_range!(call_on_range_i8, i8);
@@ -47,7 +47,7 @@ test_call_on_range!(call_on_range_i16, i16);
 test_call_on_range!(call_on_range_u16, u16);
 
 macro_rules! test_call_on_critical_ranges {
-    ($fn_name: ident, $numtype: ty) => (
+    ($fn_name:ident, $numtype:ty) => (
         #[test]
         fn $fn_name() {
             for n in (<$numtype>::min_value())...(<$numtype>::min_value()) + 130 {
@@ -83,11 +83,11 @@ fn cardinal_int_min_max() {
     let file = File::open("tests/cardinal_min_max.txt").unwrap();
     let mut lines = BufReader::new(file).lines().map(|n_str| n_str.unwrap());
     macro_rules! assert_eq_min_max {
-        ($signed: ty, $unsigned: ty) => {
+        ($signed:ty, $unsigned:ty) => (
             assert_eq!(lines.next().unwrap(), <$signed>::min_value().cardinal());
             assert_eq!(lines.next().unwrap(), <$signed>::max_value().cardinal());
             assert_eq!(lines.next().unwrap(), <$unsigned>::max_value().cardinal());
-        }
+        )
     }
     assert_eq!(lines.next().unwrap(), 0.cardinal());
     assert_eq_min_max!(i8, u8);

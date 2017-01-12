@@ -13,7 +13,7 @@ use numeral::Cardinal;
 use test::Bencher;
 
 macro_rules! bench_call_on_range {
-    ($fn_name: ident, $numtype: ty) => {
+    ($fn_name:ident, $numtype:ty) => (
         #[bench]
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {
@@ -22,14 +22,14 @@ macro_rules! bench_call_on_range {
                 }
             })
         }
-    }
+    )
 }
 
 bench_call_on_range!(bench_call_on_range_i8, i8);
 bench_call_on_range!(bench_call_on_range_u8, u8);
 
 macro_rules! bench_call_on_min_max {
-    ($fn_name: ident, $numtype: ty) => (
+    ($fn_name:ident, $numtype:ty) => (
         #[bench]
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {

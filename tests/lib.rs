@@ -7,7 +7,7 @@
 
 extern crate numeral;
 
-use numeral::Ordinal;
+use numeral::Cardinal;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
@@ -15,8 +15,8 @@ macro_rules! test_call_on_min_max {
     ($fn_name: ident, $numtype: ty) => (
         #[test]
         fn $fn_name() {
-            <$numtype>::max_value().ordinal();
-            <$numtype>::min_value().ordinal();
+            <$numtype>::max_value().cardinal();
+            <$numtype>::min_value().cardinal();
         }
     )
 }
@@ -35,7 +35,7 @@ macro_rules! test_call_on_range {
         #[test]
         fn $fn_name() {
             for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
-                n.ordinal();
+                n.cardinal();
             }
         }
     }
@@ -51,14 +51,14 @@ macro_rules! test_call_on_critical_ranges {
         #[test]
         fn $fn_name() {
             for n in (<$numtype>::min_value())...(<$numtype>::min_value()) + 130 {
-                n.ordinal();
+                n.cardinal();
             }
             for n in (<$numtype>::max_value()) - 130...(<$numtype>::max_value()) {
-                n.ordinal();
+                n.cardinal();
             }
             if <$numtype>::min_value() != 0 {
                 for n in -130...130 {
-                    n.ordinal();
+                    n.cardinal();
                 }
             }
         }
@@ -71,25 +71,25 @@ test_call_on_critical_ranges!(call_on_critical_ranges_i64, i64);
 test_call_on_critical_ranges!(call_on_critical_ranges_u64, u64);
 
 #[test]
-fn ordinal_int_m256_257() {
-    let file = File::open("tests/ordinal_m256...256.txt").unwrap();
+fn cardinal_int_m256_257() {
+    let file = File::open("tests/cardinal_m256...256.txt").unwrap();
     assert!(BufReader::new(file).lines()
             .map(|n_str| n_str.unwrap())
-            .eq((-256...256).map(|n| n.ordinal())));
+            .eq((-256...256).map(|n| n.cardinal())));
 }
 
 #[test]
-fn ordinal_int_min_max() {
-    let file = File::open("tests/ordinal_min_max.txt").unwrap();
+fn cardinal_int_min_max() {
+    let file = File::open("tests/cardinal_min_max.txt").unwrap();
     let mut lines = BufReader::new(file).lines().map(|n_str| n_str.unwrap());
     macro_rules! assert_eq_min_max {
         ($signed: ty, $unsigned: ty) => {
-            assert_eq!(lines.next().unwrap(), <$signed>::min_value().ordinal());
-            assert_eq!(lines.next().unwrap(), <$signed>::max_value().ordinal());
-            assert_eq!(lines.next().unwrap(), <$unsigned>::max_value().ordinal());
+            assert_eq!(lines.next().unwrap(), <$signed>::min_value().cardinal());
+            assert_eq!(lines.next().unwrap(), <$signed>::max_value().cardinal());
+            assert_eq!(lines.next().unwrap(), <$unsigned>::max_value().cardinal());
         }
     }
-    assert_eq!(lines.next().unwrap(), 0.ordinal());
+    assert_eq!(lines.next().unwrap(), 0.cardinal());
     assert_eq_min_max!(i8, u8);
     assert_eq_min_max!(i16, u16);
     assert_eq_min_max!(i32, u32);

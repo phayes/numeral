@@ -9,7 +9,7 @@
 extern crate numeral;
 extern crate test;
 
-use numeral::Ordinal;
+use numeral::Cardinal;
 use test::Bencher;
 
 macro_rules! bench_call_on_range {
@@ -18,7 +18,7 @@ macro_rules! bench_call_on_range {
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {
                 for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
-                    n.ordinal();
+                    n.cardinal();
                 }
             })
         }
@@ -33,8 +33,8 @@ macro_rules! bench_call_on_min_max {
         #[bench]
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {
-                <$numtype>::max_value().ordinal();
-                <$numtype>::min_value().ordinal();
+                <$numtype>::max_value().cardinal();
+                <$numtype>::min_value().cardinal();
             })
         }
     )

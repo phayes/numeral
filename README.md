@@ -8,8 +8,8 @@ Rust library providing the written english form of a number.
 ``` rust
 extern crate numeral;
 
-use numeral::Ordinal;
+use numeral::Cardinal;
 
 let n = 127;
-println!("{} is written: {}", n, n.ordinal());
+println!("{} is written: {}", n, n.cardinal());
 ```

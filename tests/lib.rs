@@ -29,6 +29,8 @@ test_call_on_min_max!(call_on_min_max_i32, i32);
 test_call_on_min_max!(call_on_min_max_u32, u32);
 test_call_on_min_max!(call_on_min_max_i64, i64);
 test_call_on_min_max!(call_on_min_max_u64, u64);
+test_call_on_min_max!(call_on_min_max_isize, isize);
+test_call_on_min_max!(call_on_min_max_usize, usize);
 
 macro_rules! test_call_on_range {
     ($fn_name:ident, $numtype:ty) => (
@@ -69,6 +71,8 @@ test_call_on_critical_ranges!(call_on_critical_ranges_i32, i32);
 test_call_on_critical_ranges!(call_on_critical_ranges_u32, u32);
 test_call_on_critical_ranges!(call_on_critical_ranges_i64, i64);
 test_call_on_critical_ranges!(call_on_critical_ranges_u64, u64);
+test_call_on_critical_ranges!(call_on_critical_ranges_isize, isize);
+test_call_on_critical_ranges!(call_on_critical_ranges_usize, usize);
 
 #[test]
 fn cardinal_int_m256_257() {
@@ -94,4 +98,26 @@ fn cardinal_int_min_max() {
     assert_eq_min_max!(i16, u16);
     assert_eq_min_max!(i32, u32);
     assert_eq_min_max!(i64, u64);
+}
+
+#[test]
+fn cardinal_min_max_ptr() {
+    use std::mem::size_of;
+
+    macro_rules! assert_eq_min_max_if_ptr_is {
+        ($ptr:ty, $int:ty) => (
+            if size_of::<$ptr>() == size_of::<$int>() {
+                assert_eq!(<$ptr>::min_value().cardinal(), <$int>::min_value().cardinal());
+                assert_eq!(<$ptr>::max_value().cardinal(), <$int>::max_value().cardinal());
+            }
+        )
+    }
+    assert_eq_min_max_if_ptr_is!(isize, i8);
+    assert_eq_min_max_if_ptr_is!(isize, i16);
+    assert_eq_min_max_if_ptr_is!(isize, i32);
+    assert_eq_min_max_if_ptr_is!(isize, i64);
+    assert_eq_min_max_if_ptr_is!(usize, u8);
+    assert_eq_min_max_if_ptr_is!(usize, u16);
+    assert_eq_min_max_if_ptr_is!(usize, u32);
+    assert_eq_min_max_if_ptr_is!(usize, u64);
 }

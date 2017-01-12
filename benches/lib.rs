@@ -48,3 +48,5 @@ bench_call_on_min_max!(bench_call_on_min_max_i32, i32);
 bench_call_on_min_max!(bench_call_on_min_max_u32, u32);
 bench_call_on_min_max!(bench_call_on_min_max_i64, i64);
 bench_call_on_min_max!(bench_call_on_min_max_u64, u64);
+bench_call_on_min_max!(bench_call_on_min_max_isize, isize);
+bench_call_on_min_max!(bench_call_on_min_max_usize, usize);

@@ -83,20 +83,13 @@ macro_rules! impl_numeral_signed {
     ($($numtype:ty),*) => ($(
         impl Cardinal for $numtype {
             fn cardinal(&self) -> String {
-                cardinal_int(i64::from(*self).abs() as u64, *self < 0)
+                cardinal_int(i64::from(*self).abs() as u64, self.is_negative())
             }
         }
     )*)
 }
 
 impl_numeral_signed!(i8, i16, i32);
-
-impl Cardinal for i64 {
-    fn cardinal(&self) -> String {
-        let n_abs = if *self == i64::min_value() { *self as u64 } else { self.abs() as u64 };
-        cardinal_int(n_abs, *self < 0)
-    }
-}
 
 macro_rules! impl_numeral_unsigned {
     ($($numtype:ty),*) => ($(
@@ -109,6 +102,26 @@ macro_rules! impl_numeral_unsigned {
 }
 
 impl_numeral_unsigned!(u8, u16, u32, u64);
+
+impl Cardinal for i64 {
+    fn cardinal(&self) -> String {
+        let n_abs = if *self == i64::min_value() { *self as u64 } else { self.abs() as u64 };
+        cardinal_int(n_abs, self.is_negative())
+    }
+}
+
+impl Cardinal for isize {
+    fn cardinal(&self) -> String {
+        let n_abs = if *self == isize::min_value() { *self as usize } else { self.abs() as usize };
+        cardinal_int(n_abs as u64, self.is_negative())
+    }
+}
+
+impl Cardinal for usize {
+    fn cardinal(&self) -> String {
+        cardinal_int(*self as u64, false)
+    }
+}
 
 /// Returns the written form of any 64-bit integer
 /// as a vector of strings.
@@ -158,7 +171,7 @@ fn compose_cardinal_int(mut n: u64, mut multiple_order: u32, cardinal: &mut Vec<
 }
 
 /// Takes an integer in [1,999] and adds it's written form
-/// to an cardinal in construction. Zero is ignored.
+/// to a cardinal in construction. Zero is ignored.
 fn push_triplet(n: u64, cardinal: &mut Vec<&str>) {
     debug_assert!(n != 0, "n == 0 in push_triplet()");
     debug_assert!(n < 1000, "n >= 1000 in push_triplet()");
@@ -174,7 +187,7 @@ fn push_triplet(n: u64, cardinal: &mut Vec<&str>) {
 }
 
 /// Takes an integer in [1,99] and adds it's written form
-/// to an cardinal in construction. Zero is ignored.
+/// to a cardinal in construction. Zero is ignored.
 fn push_doublet(n: u64, cardinal: &mut Vec<&str>) {
     debug_assert!(n != 0, "n == 0 in push_doublet()");
     debug_assert!(n < 100, "n >= 100 in push_doublet()");

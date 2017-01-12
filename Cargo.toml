@@ -1,6 +1,6 @@
 [package]
 name = "numeral"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Letheed <dev@daweb.se>"]
 description = "Written english form of a number"
 documentation = "https://docs.rs/numeral"

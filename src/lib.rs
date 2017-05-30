@@ -146,8 +146,8 @@ macro_rules! push {
 /// Pushes the strings composing the cardinal form of any unsigned 64-bit number
 /// on a vector. Zero is ignored.
 fn compose_cardinal_int(mut n: u64, mut multiple_order: u32, cardinal: &mut Vec<&str>) {
-    debug_assert!(n != 0, "n == 0 in compose_cardinal_int()");
-    debug_assert!(multiple_order == ((n as f32).log10() as u32) / 3, "wrong value for multiple_order in compose_cardinal_int()");
+    debug_assert_ne!(n, 0, "n == 0 in compose_cardinal_int()");
+    debug_assert_eq!(multiple_order, ((n as f32).log10() as u32) / 3, "wrong value for multiple_order in compose_cardinal_int()");
 
     if multiple_order > 0 {
         let mut multiplier = 10u64.pow(multiple_order * 3);
@@ -173,7 +173,7 @@ fn compose_cardinal_int(mut n: u64, mut multiple_order: u32, cardinal: &mut Vec<
 /// Takes an integer in [1,999] and adds it's written form
 /// to a cardinal in construction. Zero is ignored.
 fn push_triplet(n: u64, cardinal: &mut Vec<&str>) {
-    debug_assert!(n != 0, "n == 0 in push_triplet()");
+    debug_assert_ne!(n, 0, "n == 0 in push_triplet()");
     debug_assert!(n < 1000, "n >= 1000 in push_triplet()");
 
     let hundreds = n / 100;
@@ -189,7 +189,7 @@ fn push_triplet(n: u64, cardinal: &mut Vec<&str>) {
 /// Takes an integer in [1,99] and adds it's written form
 /// to a cardinal in construction. Zero is ignored.
 fn push_doublet(n: u64, cardinal: &mut Vec<&str>) {
-    debug_assert!(n != 0, "n == 0 in push_doublet()");
+    debug_assert_ne!(n, 0, "n == 0 in push_doublet()");
     debug_assert!(n < 100, "n >= 100 in push_doublet()");
 
     if n < 20  {

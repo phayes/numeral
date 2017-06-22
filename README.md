@@ -5,7 +5,7 @@ Rust library providing the written english form of a number.
 
 ## Usage
 
-``` rust
+```rust
 extern crate numeral;
 
 use numeral::Cardinal;

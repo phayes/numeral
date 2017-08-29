@@ -1,7 +1,7 @@
 [package]
 name = "numeral"
 version = "0.3.1"
-authors = ["Letheed <dev@daweb.se>"]
+authors = ["Letheed <letheed@outlook.com>"]
 description = "Written english form of a number"
 documentation = "https://docs.rs/numeral"
 repository = "https://github.com/letheed/numeral"

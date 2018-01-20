@@ -17,7 +17,7 @@ macro_rules! bench_call_on_range {
         #[bench]
         fn $fn_name(b: &mut Bencher) {
             b.iter(|| {
-                for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
+                for n in (<$numtype>::min_value())..=(<$numtype>::max_value()) {
                     n.cardinal();
                 }
             })

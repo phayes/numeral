@@ -36,7 +36,7 @@ macro_rules! test_call_on_range {
     ($fn_name:ident, $numtype:ty) => (
         #[test]
         fn $fn_name() {
-            for n in (<$numtype>::min_value())...(<$numtype>::max_value()) {
+            for n in (<$numtype>::min_value())..=(<$numtype>::max_value()) {
                 n.cardinal();
             }
         }
@@ -52,14 +52,14 @@ macro_rules! test_call_on_critical_ranges {
     ($fn_name:ident, $numtype:ty) => (
         #[test]
         fn $fn_name() {
-            for n in (<$numtype>::min_value())...(<$numtype>::min_value()) + 130 {
+            for n in (<$numtype>::min_value())..=(<$numtype>::min_value()) + 130 {
                 n.cardinal();
             }
-            for n in (<$numtype>::max_value()) - 130...(<$numtype>::max_value()) {
+            for n in (<$numtype>::max_value()) - 130..=(<$numtype>::max_value()) {
                 n.cardinal();
             }
             if <$numtype>::min_value() != 0 {
-                for n in -130...130 {
+                for n in -130..=130 {
                     n.cardinal();
                 }
             }
@@ -76,10 +76,10 @@ test_call_on_critical_ranges!(call_on_critical_ranges_usize, usize);
 
 #[test]
 fn cardinal_value_m256_256() {
-    let file = File::open("tests/cardinal_m256...256.txt").unwrap();
+    let file = File::open("tests/cardinal_m256..=256.txt").unwrap();
     assert!(BufReader::new(file).lines()
             .map(|n_str| n_str.unwrap())
-            .eq((-256...256).map(|n: i32| n.cardinal())));
+            .eq((-256..=256).map(|n: i32| n.cardinal())));
 }
 
 #[test]

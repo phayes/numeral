@@ -8,8 +8,16 @@
 extern crate numeral;
 
 use numeral::Cardinal;
-use std::fs::File;
-use std::io::{BufRead, BufReader};
+
+fn read_file(filename: &str) -> Result<String, std::io::Error> {
+    use std::fs::File;
+    use std::io::Read;
+
+    let mut file = File::open(filename)?;
+    let mut buffer = String::new();
+    file.read_to_string(&mut buffer)?;
+    Ok(buffer)
+}
 
 macro_rules! test_call_on_min_max {
     ($fn_name:ident, $numtype:ty) => (
@@ -76,16 +84,18 @@ test_call_on_critical_ranges!(call_on_critical_ranges_usize, usize);
 
 #[test]
 fn cardinal_value_m256_256() {
-    let file = File::open("tests/cardinal_m256..=256.txt").unwrap();
-    assert!(BufReader::new(file).lines()
-            .map(|n_str| n_str.unwrap())
-            .eq((-256..=256).map(|n: i32| n.cardinal())));
+    let cardinals = read_file("tests/cardinal_m256..=256.txt").unwrap();
+    assert!(
+        cardinals
+            .lines()
+            .eq((-256..=256).map(|n: i32| n.cardinal()))
+    );
 }
 
 #[test]
 fn cardinal_value_min_max_int() {
-    let file = File::open("tests/cardinal_min_max.txt").unwrap();
-    let mut lines = BufReader::new(file).lines().map(|n_str| n_str.unwrap());
+    let cardinals = read_file("tests/cardinal_min_max.txt").unwrap();
+    let mut lines = cardinals.lines();
     macro_rules! assert_eq_min_max {
         ($signed:ty, $unsigned:ty) => (
             assert_eq!(lines.next().unwrap(), <$signed>::min_value().cardinal());
